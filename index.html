@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Pollo Loco</title>
+    <link rel="icon" href="img\6_salsa_bottle\salsa_bottle.png">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="js/classes/background/images/images.class.js"></script>
+    <script src="js/classes/background/sound/audio.class.js"></script>
+    <script src="./js/classes/world.class.js"></script>
+    <script src="./js/classes/drawable-object.class.js"></script>
+    <script src="./js/classes/movable-Object.class.js"></script>
+    <script src="./js/classes/throwable-object.class.js"></script>
+    <script src="./js/classes/hud/status-bar.class.js"></script>
+    <script src="./js/classes/entities/character.class.js"></script>
+    <script src="./js/classes/entities/chick.class.js"></script>
+    <script src="./js/classes/entities/chicken.class.js"></script>
+    <script src="./js/classes/entities/chickenboss.class.js"></script>
+    <script src="./js/classes/background/collectables-class.js"></script>
+    <script src="./js/classes/background/background-object.class.js"></script>
+    <script src="./js/classes/keyboard.class.js"></script>
+    <script src="./js/classes/level.class.js"></script>
+    <script src="/levels/level1.js"></script>
+    <script src="./js/game.js"></script>
+    <link rel="icon" href="#">
+</head>
+
+<body onload="init()">
+    <div class="game">
+        <img class="title" src="img/9_intro_outro_screens/titel.png">
+
+        <div class="backgroundFilter"></div>
+
+        <div class="tourn">
+            <img src="img/9_intro_outro_screens/maxresdefault.jpg">
+        </div>
+
+        <div id="cover">
+            <img src="img/9_intro_outro_screens/start/startscreen_1.png" id="startWinLoseImg">
+            <div id="loading" class="d-none"></div>
+            <div class="iconFlex">
+                <img class="d-none" id="iconAudio" src="img/0_icons/audio_on.png" onclick="setAudio()">
+            </div>
+            <h2 id="start" class="start" onclick="startAndRestartGameButton()">
+                Start Game
+            </h2>
+            <h2 id="tutorialButton" class="start" onclick="tutorialButton()">
+                Tutorial
+            </h2>
+
+            <p id="tutorial" class="tutorial d-none" onclick="tutorialRemove()">
+                D = Move Left <br>
+                A = Move Right <br>
+                F = Throw Bottle <br>
+                Space = Jump <br>
+                <br>
+                Collect Salsa to throw it <br>
+                Collect Coins to get more damage <br>
+                Kill the Boss to win!
+            </p>
+
+            <div class="iconFlex">
+                <div class="d-none" id="handyIconFlex">
+                        <p id="buttonleft"><</p>
+                        <p id="buttonright">></p>
+                        <p id="buttonjump">Jump</p>
+                        <p id="buttonthrow">Throw</p>
+                </div>
+                <img class="d-none" id="iconFullscreen" src="img/0_icons/screen_mode.png" onclick="setFullscreen()">
+            </div>
+            <canvas width="720" height="480" id="canvas"></canvas>
+        </div>
+
+        <footer class="rights">
+            <a href="privacy_policy.html" class="l">Privacy Policy</a>
+            <a href="legal_notice.html" class="l">Legal Notice</a>
+        </footer>
+
+    </div>
+</body>
+
+</html>
